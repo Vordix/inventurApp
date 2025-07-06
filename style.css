@@ -1,9 +1,13 @@
-html, body{
-    overflow: hidden;
+html, body {
+    overflow-x: hidden;
+    overflow-y: hidden; /* verhindert auch vertikales Scrollen */
+    touch-action: none; /* verhindert Wischgesten wie Scrollen und Zoomen */
 }
 body {
     min-height: 100vh;
     min-width: 100vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 
