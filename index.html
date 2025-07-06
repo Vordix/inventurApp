@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Inventur-Aufnahme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet"> <!-- Lexend Schriftart eingefügt -->
+</head>
+<body>
+    <div class="container">
+        <h1>Inventur-Aufnahme</h1>
+        <form id="inventoryForm">
+
+            <label for="quantity">Anzahl:</label>
+            <input type="number" class="dropdown" name="quantity" required value="1"/>
+
+            <label for="item">Gegenstand:</label>
+            <select class="dropdown" name="item" required>
+                <option value="">Bitte wählen…</option>
+                <option value="shirt">Shirt</option>
+                <option value="pants">Hose</option>
+                <option value="jacket">Jacke</option>
+                <option value="shoes">Schuhe</option>
+                <option value="hat">Mütze</option>
+            </select>
+
+            <button type="submit">Aufnehmen</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
