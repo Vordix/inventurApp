@@ -13,13 +13,49 @@
         <form id="inventoryForm">
 
             <label class="ueberschrift" for="quantity">Anzahl:</label>
-            <input type="number" class="dropdown" name="quantity" required value="1"/>
+            <input type="number" class="dropdown" name="quantity" required value="1" min="1"/>
 
             <label class="ueberschrift" for="category">Kategorie:</label>
             <select class="dropdown" id="categorySelect" name="category" required>
-                <option value="">Kleidung</option>
-                <option value="shirt">Requisite</option>
-                <option value="pants">Bühnenbild</option>
+                <option value="Kleidung">Kleidung</option>
+                <option value="Requisite">Requisite</option>
+                <option value="Bühnenbild">Bühnenbild</option>
+            </select>
+
+                <label class="ueberschrift" id="KleidungsKategorieLabel" for="KleidungsKategorieSelect">Kategorie:</label>
+                <select class="dropdown" id="KleidungsKategorieSelect" name="KleidungsKategorieSelect">
+                    <option value="Anzug">Anzug</option>
+                    <option value="Kleid">Kleid</option>
+                    <option value="Shirt">Shirt</option>
+                    <option value="Hose">Hose</option>
+                    <option value="Schuhe">Schuhe</option>
+                    <option value="Sonstiges">Sonstiges</option>
+                </select>
+
+                <label class="ueberschrift" id="KleidungsGrößeSelectLabel" for="KleidungsGrößeSelect">Größe:</label>
+                <select class="dropdown" id="KleidungsGrößeSelect" name="KleidungsGrößeSelect" default="M">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+
+                <label class="ueberschrift" id="RequisitenGrößeLabel" for="RequisitenGrößeSelect"> Größe:</label>
+                <select class="dropdown" id="RequisitenGrößeSelect" name="RequisitenGrößeSelect">
+                    <option value="Klein">Klein</option>
+                    <option value="Mittel">Mittel</option>
+                    <option value="Groß">Groß</option>
+                </select>
+
+                <label class="ueberschrift" id="BuehnenbildKategorieLabel" for="BuehnenbildKategorieSelect">Bühnenbild:</label>
+                <select class="dropdown" id="BuehnenbildKategorieSelect" name="BuehnenbildKategorieSelect">
+                    <option value="Hintergrund">Hintergrund</option>
+                    <option value="Fassade">Fassade</option>
+                    <option value="Objekt">Objekt</option>
+                    <option value="Technik">Technik</option>
+                    <option value="Sonstiges">Sonstiges</option>
                 </select>
 
         </form>

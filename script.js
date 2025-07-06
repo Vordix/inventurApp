@@ -1,15 +1,61 @@
-document.getElementById('categorySelect').addEventListener('change', function() {
-    // Alle Unter-Selects ausblenden
-    document.getElementById('KleidungSelect').style.display = 'none';
-    document.getElementById('RequisiteSelect').style.display = 'none';
-    document.getElementById('BuehnenbildSelect').style.display = 'none';
+hide('KleidungsKategorieLabel');
+hide('KleidungsKategorieSelect');
+hide('KleidungsGrößeSelectLabel');
+hide('KleidungsGrößeSelect');
+hide('RequisitenGrößeLabel');
+hide('RequisitenGrößeSelect');
 
-    // Je nach Auswahl das passende Select anzeigen
+document.getElementById('categorySelect').addEventListener('change', function() {
     if (this.value === 'Kleidung') {
-        document.getElementById('KleidungSelect').style.display = '';
+        show('KleidungsKategorieLabel');
+        show('KleidungsKategorieSelect');
+        show('KleidungsGrößeSelectLabel');
+        show('KleidungsGrößeSelect');
+
+        hide('RequisitenGrößeLabel');
+        hide('RequisitenGrößeSelect');
+        hide('BuehnenbildKategorieSelect');
+        hide('BuehnenbildKategorieLabel');
     } else if (this.value === 'Requisite') {
-        document.getElementById('RequisiteSelect').style.display = '';
+        show('RequisitenGrößeLabel');
+        show('RequisitenGrößeSelect');
+
+        hide('KleidungsKategorieLabel');
+        hide('KleidungsKategorieSelect');
+        hide('KleidungsGrößeSelectLabel');
+        hide('KleidungsGrößeSelect');
+        hide('BuehnenbildKategorieSelect');
+        hide('BuehnenbildKategorieLabel');
     } else if (this.value === 'Bühnenbild') {
-        document.getElementById('BuehnenbildSelect').style.display = '';
+        show('BuehnenbildKategorieLabel');
+        show('BuehnenbildKategorieSelect');
+
+        hide('KleidungsKategorieLabel');
+        hide('KleidungsKategorieSelect');
+        hide('KleidungsGrößeSelectLabel');
+        hide('KleidungsGrößeSelect');
+        hide('RequisitenGrößeLabel');
+        hide('RequisitenGrößeSelect');
+    } else {
+        // Falls nichts ausgewählt ist, alles ausblenden
+        hide('KleidungsKategorieLabel');
+        hide('KleidungsKategorieSelect');
+        hide('KleidungsGrößeSelectLabel');
+        hide('KleidungsGrößeSelect');
+        hide('RequisitenGrößeLabel');
+        hide('RequisitenGrößeSelect');
+        hide('BuehnenbildKategorieSelect');
+        hide('BuehnenbildKategorieLabel');
     }
 });
+
+function show(id) {
+    const el = document.getElementById(id);
+    if (!el) console.log("FEHLT:", id);
+    else el.style.display = '';
+}
+function hide(id) {
+    const el = document.getElementById(id);
+    if (!el) console.log("FEHLT:", id);
+    else el.style.display = 'none';
+}
