@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
     hide('KleidungsKategorieLabel');
     hide('KleidungsKategorieSelect');
@@ -61,5 +63,4 @@ document.addEventListener('DOMContentLoaded', function() {
         const el = document.getElementById(id);
         if (!el) console.log("FEHLT:", id);
         else el.style.display = 'none';
-    }
-});
+    }});

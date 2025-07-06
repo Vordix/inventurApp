@@ -8,48 +8,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet"> <!-- Lexend Schriftart eingefügt -->
 </head>
 <body>
+
+        <input
+        type="file"
+        id="imageInput"
+        accept="image/*"
+        />
+
+
+
     <div class="container">
         <h1>Inventur-Aufnahme</h1>
 
         <div id="inventoryForm">
+                <div class="form-group">
+                    <label class="ueberschrift" for="category">Kategorie:</label>
+                    <select class="dropdown" id="categorySelect" name="category" required>
+                        <option value="Kleidung">Kleidung</option>
+                        <option value="Requisite">Requisite</option>
+                        <option value="Bühnenbild">Bühnenbild</option>
+                    </select>
+                </div>
+                 
+            <div class="form-group">
+                <label class="ueberschrift" for="quantity">Anzahl:</label>
+                <select name="quantity" id="quantitySelect" class="dropdown" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="über 25">26+</option>
+                </select>
+            </div>
 
-            <label class="ueberschrift" for="quantity">Anzahl:</label>
-            <select name="quantity" id="quantitySelect" class="dropdown" required>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="über 25">26+</option>
-            </select>
-
-            <label class="ueberschrift" for="category">Kategorie:</label>
-            <select class="dropdown" id="categorySelect" name="category" required>
-                <option value="Kleidung">Kleidung</option>
-                <option value="Requisite">Requisite</option>
-                <option value="Bühnenbild">Bühnenbild</option>
-            </select>
-
+            <div class="form-group">
                 <label class="ueberschrift" id="KleidungsKategorieLabel" for="KleidungsKategorieSelect">Kategorie:</label>
                 <select class="dropdown" id="KleidungsKategorieSelect" name="KleidungsKategorieSelect">
                     <option value="Anzug">Anzug</option>
@@ -59,7 +72,9 @@
                     <option value="Schuhe">Schuhe</option>
                     <option value="Sonstiges">Sonstiges</option>
                 </select>
+            </div>
 
+            <div class="form-group">
                 <label class="ueberschrift" id="KleidungsGrößeSelectLabel" for="KleidungsGrößeSelect">Größe:</label>
                 <select class="dropdown" id="KleidungsGrößeSelect" name="KleidungsGrößeSelect" default="M">
                     <option value="XS">XS</option>
@@ -69,14 +84,18 @@
                     <option value="XL">XL</option>
                     <option value="XXL">XXL</option>
                 </select>
+            </div>
 
+            <div class="form-group">
                 <label class="ueberschrift" id="RequisitenGrößeLabel" for="RequisitenGrößeSelect"> Größe:</label>
                 <select class="dropdown" id="RequisitenGrößeSelect" name="RequisitenGrößeSelect">
                     <option value="Klein">Klein</option>
                     <option value="Mittel">Mittel</option>
                     <option value="Groß">Groß</option>
                 </select>
+            </div>
 
+            <div class="form-group">
                 <label class="ueberschrift" id="BuehnenbildKategorieLabel" for="BuehnenbildKategorieSelect">Bühnenbild:</label>
                 <select class="dropdown" id="BuehnenbildKategorieSelect" name="BuehnenbildKategorieSelect">
                     <option value="Hintergrund">Hintergrund</option>
@@ -85,9 +104,9 @@
                     <option value="Technik">Technik</option>
                     <option value="Sonstiges">Sonstiges</option>
                 </select>
-
             </div>
-        
+        </div>
+        <button id="submit">Eintragen und nächstes</button>
     </div>
 
     <script src="script.js"></script>

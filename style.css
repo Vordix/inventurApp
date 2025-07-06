@@ -12,7 +12,6 @@ body {
 
 
 .container {
-    border: 1px dashed white;
     max-width: 90vw;
     max-height: 90vh;
     display: flex;
@@ -48,9 +47,21 @@ h1 {
 
 #inventoryForm {
     margin-top: auto;
-    background-color: rgba(15, 235, 26, 0.2);
-    
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr; /* zwei gleich breite Spalten */
 }
+
+.form-group {
+  grid-column: 1 / 2; /* platziert alles in der linken Spalte */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: olive 1px solid;
+}
+
+
+
 #inventoryForm label,
 #inventoryForm select {
   display: block;
@@ -76,16 +87,22 @@ input[type="number"] {
 }
 
 button {
+    grid-column: 2 / 2;;
     padding: 10px;
-    background-color: #28a745;
+    max-width: 80vw;
+    min-height: 10vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: Lexend, sans-serif;
+    font-weight: 600;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    align-self: center;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .dropdown {
@@ -98,5 +115,5 @@ button:hover {
     font-weight: 600;
     font-size: medium;
     color: white; /* Schriftfarbe noch ändern TODO */
-    background: rgba(29, 7, 233, 0.4);
+    background: rgba(0, 0, 0, 0.4);
 }
