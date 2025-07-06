@@ -9,18 +9,12 @@
 </head>
 <body>
 
-        <input
-        type="file"
-        id="imageInput"
-        accept="image/*"
-        />
-
-
-
     <div class="container">
         <h1>Inventur-Aufnahme</h1>
+         
 
         <div id="inventoryForm">
+            <input type="file" id="imageInput" accept="image/*" capture="environment" />
                 <div class="form-group">
                     <label class="ueberschrift" for="category">Kategorie:</label>
                     <select class="dropdown" id="categorySelect" name="category" required>

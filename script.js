@@ -1,3 +1,21 @@
+document.getElementById("imageInput").addEventListener("change", function () {
+  const file = this.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    const imageDataUrl = e.target.result; // Base64-Bild
+
+    // Setze das Bild als Hintergrund von .container
+    const container = document.querySelector(".container");
+    container.style.backgroundImage = `url(${imageDataUrl})`;
+    container.style.backgroundSize = "cover";
+    container.style.backgroundPosition = "center";
+    container.style.backgroundRepeat = "no-repeat";
+  };
+
+  reader.readAsDataURL(file); // Lese Bild als Base64
+});
 
 
 document.addEventListener('DOMContentLoaded', function() {
