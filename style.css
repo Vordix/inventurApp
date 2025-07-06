@@ -20,6 +20,12 @@ form {
 label {
     margin-bottom: 5px;
 }
+.ueberschrift {
+    font-family: Lexend, sans-serif;
+    font-weight: 600;
+    font-size: large;
+    color: white; /* Schriftfarbe noch ändern TODO */
+}
 
 input[type="number"] {
     margin-bottom: 10px;
