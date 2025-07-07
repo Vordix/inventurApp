@@ -18,6 +18,7 @@ document.getElementById("imageInput").addEventListener("change", function () {
 });
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
     hide('KleidungsKategorieLabel');
     hide('KleidungsKategorieSelect');
@@ -82,3 +83,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!el) console.log("FEHLT:", id);
         else el.style.display = 'none';
     }});
+
+document.getElementById("submit").addEventListener("click", async function (e) {
+    e.preventDefault();
+
+    const imageInput = document.getElementById("imageInput");
+    if (!imageInput.files.length) {
+        alert("Bitte zuerst ein Bild auswählen.");
+        return;
+    }
+
+});

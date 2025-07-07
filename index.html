@@ -13,7 +13,7 @@
         <h1>Inventur-Aufnahme</h1>
          
 
-        <div id="inventoryForm">
+        <form id="inventoryForm" method="POST" enctype="multipart/form-data">
             <input type="file" id="imageInput" accept="image/*"/>
                 <div class="form-group">
                     <label class="ueberschrift" for="category">Kategorie:</label>
@@ -99,7 +99,7 @@
                     <option value="Sonstiges">Sonstiges</option>
                 </select>
             </div>
-        </div>
+        </form>
         <button id="submit">Eintragen und nächstes</button>
     </div>
 
